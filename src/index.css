@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #0f131c;
+  --color-surface-dim: #0f131c;
+  --color-surface-bright: #353943;
+  --color-surface-container-lowest: #0a0e17;
+  --color-surface-container-low: #181b25;
+  --color-surface-container: #1c1f29;
+  --color-surface-container-high: #262a34;
+  --color-surface-container-highest: #31353f;
+  --color-on-surface: #dfe2ef;
+  --color-on-surface-variant: #b9cacb;
+  --color-inverse-surface: #dfe2ef;
+  --color-inverse-on-surface: #2c303a;
+  --color-outline: #849495;
+  --color-outline-variant: #3a494b;
+  --color-surface-tint: #00dce6;
+  --color-primary: #e0fdff;
+  --color-on-primary: #00373a;
+  --color-primary-container: #00f2fe;
+  --color-on-primary-container: #006a70;
+  --color-inverse-primary: #00696f;
+  --color-secondary: #4edea3;
+  --color-on-secondary: #003824;
+  --color-secondary-container: #00a572;
+  --color-on-secondary-container: #00311f;
+  --color-tertiary: #f9f5ff;
+  --color-on-tertiary: #1000a9;
+  --color-tertiary-container: #d8d7ff;
+  --color-on-tertiary-container: #4a4cd7;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  --color-primary-fixed: #6ff6ff;
+  --color-primary-fixed-dim: #00dce6;
+  --color-on-primary-fixed: #002022;
+  --color-on-primary-fixed-variant: #004f53;
+  --color-secondary-fixed: #6ffbbe;
+  --color-secondary-fixed-dim: #4edea3;
+  --color-on-secondary-fixed: #002113;
+  --color-on-secondary-fixed-variant: #005236;
+  --color-tertiary-fixed: #e1e0ff;
+  --color-tertiary-fixed-dim: #c0c1ff;
+  --color-on-tertiary-fixed: #07006c;
+  --color-on-tertiary-fixed-variant: #2f2ebe;
+  --color-background: #0f131c;
+  --color-on-background: #dfe2ef;
+  --color-surface-variant: #31353f;
+
+  --font-geist: 'Geist', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --spacing-margin: 3rem;
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2.5rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-mobile: 1rem;
+}
+
+/* Typography Utility Classes matching exact spec */
+.font-headline-xl {
+  font-family: 'Geist', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: clamp(40px, 4.5vw, 56px);
+  letter-spacing: -0.03em;
+  font-weight: 600;
+}
+
+.font-headline-lg {
+  font-family: 'Geist', sans-serif;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: clamp(32px, 3.5vw, 40px);
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.font-headline-md {
+  font-family: 'Geist', sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+}
+
+.font-headline-sm {
+  font-family: 'Geist', sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0em;
+  font-weight: 500;
+}
+
+.font-body-lg {
+  font-family: 'Geist', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0em;
+  font-weight: 400;
+}
+
+.font-body-md {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0em;
+  font-weight: 400;
+}
+
+.font-body-sm {
+  font-family: 'Geist', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+
+.font-label-lg {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+.font-label-md {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+.font-code-block {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0em;
+  font-weight: 400;
+}
+
+/* Subtle background engineering mesh grid */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 242, 254, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 242, 254, 0.035) 1px, transparent 1px);
+}
+
+/* Glass Level 1 specifications */
+.glass-panel {
+  background: rgba(13, 17, 23, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 242, 254, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  background: rgba(16, 24, 39, 0.88);
+  border-color: rgba(0, 242, 254, 0.38);
+  box-shadow: 0 10px 30px -4px rgba(0, 242, 254, 0.12), 0 0 1px 1px rgba(0, 242, 254, 0.25);
+}
+
+/* Primary glowing action button */
+.btn-cyber-primary {
+  background-color: #00f2fe;
+  color: #0a0e17;
+  box-shadow: 0 0 18px rgba(0, 242, 254, 0.35);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-cyber-primary:hover {
+  box-shadow: 0 0 28px rgba(0, 242, 254, 0.65);
+  transform: translateY(-1px);
+}
+
+/* Terminal blinking cursor */
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.terminal-cursor {
+  animation: blink 1s infinite;
+}
+
+/* Ambient pulse glow for status dots */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.9); }
+}
+
+.pulse-status {
+  animation: pulseGlow 2.2s infinite ease-in-out;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0e17;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c1f29;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a494b;
+}
